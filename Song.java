@@ -59,11 +59,23 @@ public class Song {
     {
         if (liked)
         {
-            return "\""+name+"\"" + " by " + artist + " ("+getTime() +") "+" -- liked";
+            if (getTime()%60<10)
+            {
+                return "\""+name+"\"" + " by " + artist + " ("+getTime()/60+":0"+getTime()%60 +") "+" -- liked";
+            }
+            else{
+                return "\""+name+"\"" + " by " + artist + " ("+getTime()/60+":"+getTime()%60 +") "+" -- liked";
+            }
         }
         else
         {
-            return "\""+name+"\"" + " by " + artist + " ("+getTime() +")";
+            if (getTime()%60<10)
+            {
+                return "\""+name+"\"" + " by " + artist + " ("+getTime()/60+":0"+getTime()%60 +")";
+            }
+            else{
+                return "\""+name+"\"" + " by " + artist + " ("+getTime()/60+":"+getTime()%60 +")";
+            }
         }
     }
 

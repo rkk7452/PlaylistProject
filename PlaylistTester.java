@@ -48,7 +48,14 @@ public class PlaylistTester {
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
+        if (Conner.getSongTime()%60<10)
+        {
+            System.out.println(Conner.getSongTime()/60 + ":0" + Conner.getSongTime()%60);
+        }
+        else
+        {
         System.out.println(Conner.getSongTime()/60 + ":" + Conner.getSongTime()%60);
+        }
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
