@@ -9,7 +9,7 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-    private ArrayList <String> Songs;
+    private ArrayList <Song> Songs;
 
 
 
@@ -19,7 +19,7 @@ public class Playlist {
       */
     public Playlist ()
     {
-        Songs = new ArrayList<String>();
+        Songs = new ArrayList<Song>();
     }
 
       
@@ -35,6 +35,7 @@ public class Playlist {
        * Removing all unliked songs from the playlist (careful with this one!)
        */
       public void addSong (String name, String artist, int minutes, int seconds){
-
+        Song n = new Song(name, artist, minutes, seconds, false);
+        Songs.add(n);
       }
 }
