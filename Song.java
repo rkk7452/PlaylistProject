@@ -51,6 +51,10 @@ public class Song {
     {
         return liked;
     }
+    public void toggleLike()
+    {
+        liked = !liked;
+    }
     public String toString()
     {
         if (liked)

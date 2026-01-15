@@ -38,4 +38,35 @@ public class Playlist {
         Song n = new Song(name, artist, minutes, seconds, false);
         Songs.add(n);
       }
+      public void likeSong (String name)
+      {
+        for (int i = 0; i<Songs.size(); i++)
+        {
+          if (Songs.get(i).getName()==name)
+          {
+            Songs.get(i).toggleLike();
+          }
+        }
+      }
+
+      public void removeSong (String name)
+      {
+        for (int i = 0; i<Songs.size(); i++)
+        {
+          if (Songs.get(i).getName()==name)
+          {
+            Songs.remove(i);
+          }
+        }
+      }
+
+      public String examineSongs()
+      {
+        String songsList = "";
+        for (int i = 0; i<Songs.size(); i++)
+        {
+          songsList+=Songs.get(i).toString()+"\n";
+        }
+        return songsList;
+      }
 }
