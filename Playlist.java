@@ -69,4 +69,16 @@ public class Playlist {
         }
         return songsList;
       }
+      public String examineLikedSongs()
+      {
+        String songsList = "";
+        for (int i = 0; i<Songs.size(); i++)
+        {
+          if (Songs.get(i).getLiked()==true)
+          {
+            songsList+=Songs.get(i).toString()+"\n";
+          }
+        }
+        return songsList;
+      }
 }
