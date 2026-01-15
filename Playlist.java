@@ -69,6 +69,7 @@ public class Playlist {
         }
         return songsList;
       }
+<<<<<<< HEAD
       public String examineLikedSongs() {
         String likedSongList = "";
         for (int i = 0; i<Songs.size(); i++) {
@@ -78,4 +79,18 @@ public class Playlist {
         }
         return likedSongList;
     }
+=======
+      public String examineLikedSongs()
+      {
+        String songsList = "";
+        for (int i = 0; i<Songs.size(); i++)
+        {
+          if (Songs.get(i).getLiked()==true)
+          {
+            songsList+=Songs.get(i).toString()+"\n";
+          }
+        }
+        return songsList;
+      }
+>>>>>>> 1c9778a1d15f3536935ed8421de2f8a5bc3100fe
 }
