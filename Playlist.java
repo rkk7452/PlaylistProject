@@ -78,4 +78,18 @@ public class Playlist {
         }
         return likedSongList;
     }
+    public int getSongTime(){
+      int duration = 0;
+      for (int i = 0; i < Songs.size();i++){
+          duration += Songs.get(i).getTime();
+      }
+      return duration;
+    }
+    public void removeUnlikedSongs() {
+        for (int i = 0; i<Songs.size(); i++) {
+            if (!Songs.get(i).getLiked()) {
+                Songs.remove(i);
+            }
+        }
+    }
 }
