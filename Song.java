@@ -43,9 +43,9 @@ public class Song {
     {
         return artist;
     }
-    public String getTime()
+    public int getTime()
     {
-        return minutes+":"+seconds;
+        return minutes*60+seconds;
     }
     public boolean getLiked()
     {
